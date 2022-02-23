@@ -4,16 +4,16 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
+  console.log('ExpenseItem is rendering');
+  console.log('props.title:', props.title);
   const [title, setTitle] = useState(props.title);
-
+  console.log('title:', title);
+  
   // function clickHandler() { }
   const clickHandler = () => {
     setTitle('Updated!');
-    console.log(title);
+    // console.log(title);
   };
-
-  console.log('On Rendering');
-  console.log(title);
 
   return (
     <Card className="expense-item">
