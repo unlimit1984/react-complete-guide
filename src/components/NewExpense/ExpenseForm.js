@@ -2,38 +2,45 @@ import { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-  //   const [enteredTitle, setEnteredTitle] = useState('');
-  //   const [enteredAmount, setEnteredAmount] = useState('');
-  //   const [enteredDate, setEnteredDate] = useState('');
-  //   const titleChangeHandler = (event) => {
-  //     setEnteredTitle(event.target.value);
-  //   };
-
-  //   const amountChangeHandler = (event) => {
-  //     setEnteredAmount(event.target.value);
-  //   };
-
-  //   const dateChangeHandler = (event) => {
-  //     setEnteredDate(event.target.value);
-  //   };
-
-  const [userInput, setUserInput] = useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: '',
-  });
-
+  // OPTION 1
+  const [enteredTitle, setEnteredTitle] = useState('');
+  const [enteredAmount, setEnteredAmount] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
   const titleChangeHandler = (event) => {
-    setUserInput({ ...userInput, enteredTitle: event.target.value });
+    setEnteredTitle(event.target.value);
   };
 
   const amountChangeHandler = (event) => {
-    setUserInput({ ...userInput, enteredAmount: event.target.value });
+    setEnteredAmount(event.target.value);
   };
 
   const dateChangeHandler = (event) => {
-    setUserInput({ ...userInput, enteredDate: event.target.value });
+    setEnteredDate(event.target.value);
   };
+
+  // OPTION 2
+  //   const [userInput, setUserInput] = useState({
+  //     enteredTitle: '',
+  //     enteredAmount: '',
+  //     enteredDate: '',
+  //   });
+
+  //   const titleChangeHandler = (event) => {
+  //     // OPTION 2
+  //     setUserInput({ ...userInput, enteredTitle: event.target.value });
+  //     // OPTION 3
+  //     setUserInput((prevState) => {
+  //       return { ...prevState, enteredTitle: event.target.value };
+  //     });
+  //   };
+
+  //   const amountChangeHandler = (event) => {
+  //     setUserInput({ ...userInput, enteredAmount: event.target.value });
+  //   };
+
+  //   const dateChangeHandler = (event) => {
+  //     setUserInput({ ...userInput, enteredDate: event.target.value });
+  //   };
 
   return (
     <form>
