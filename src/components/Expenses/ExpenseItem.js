@@ -8,7 +8,7 @@ const ExpenseItem = (props) => {
   console.log('props.title:', props.title);
   const [title, setTitle] = useState(props.title);
   console.log('title:', title);
-  
+
   // function clickHandler() { }
   const clickHandler = () => {
     setTitle('Updated!');
@@ -16,18 +16,19 @@ const ExpenseItem = (props) => {
   };
 
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date}></ExpenseDate>
-      <div className="expense-item__description">
-        <h2>{title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date}></ExpenseDate>
+        <div className="expense-item__description">
+          <h2>{title}</h2>
+          <div className="expense-item__price">${props.amount}</div>
+        </div>
 
-      {/* OPTION 1 */}
-      {/* <button onClick={() => console.log('Clicked!')}>Change title</button> */}
+        {/* OPTION 1 */}
+        {/* <button onClick={() => console.log('Clicked!')}>Change title</button> */}
 
-      {/* OPTION 2 */}
-      {/* <button
+        {/* OPTION 2 */}
+        {/* <button
         onClick={() => {
           console.log('Clicked!');
         }}
@@ -35,8 +36,8 @@ const ExpenseItem = (props) => {
         Change title
       </button> */}
 
-      {/* OPTION 3 */}
-      {/* <button
+        {/* OPTION 3 */}
+        {/* <button
         onClick={function () {
           console.log('Clicked!');
         }}
@@ -44,9 +45,10 @@ const ExpenseItem = (props) => {
         Change title
       </button> */}
 
-      {/* OPTION 4 */}
-      <button onClick={clickHandler}>Change title</button>
-    </Card>
+        {/* OPTION 4 */}
+        <button onClick={clickHandler}>Change title</button>
+      </Card>
+    </li>
   );
 };
 
