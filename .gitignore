@@ -1,4 +1,3 @@
-06-react-style-app/node_modules
-06-react-style-app/.eslintcache
-Expenses/node_modules
-Expenses/.eslintcache
+node_modules
+.eslintcache
+
