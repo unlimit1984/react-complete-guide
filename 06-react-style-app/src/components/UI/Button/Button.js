@@ -1,6 +1,6 @@
 import React from 'react';
 // OPTION 1
-import './Button.css'
+// import './Button.css'
 //OPTION with CSS Modules
 import styles from './Button.module.css'
 
