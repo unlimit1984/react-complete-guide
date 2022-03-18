@@ -3,7 +3,7 @@ const UserItem = (props) => {
 
   return (
     <li>
-      <h3>{`${user.name} (${user.age} years old)`}</h3>
+      <input readOnly value={`${user.name} (${user.age} years old)`} />
     </li>
   );
 };

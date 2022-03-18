@@ -1,10 +1,11 @@
 import UserItem from '../UserItem/UserItem';
+import styles from './UserItemList.module.css';
 
 const UserItemList = (props) => {
   const users = props.items;
 
   return (
-    <ul>
+    <ul className={styles.item}>
       {users.map((user) => (
         <UserItem key={user.id} item={user}></UserItem>
       ))}

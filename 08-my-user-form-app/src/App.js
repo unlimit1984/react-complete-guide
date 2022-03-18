@@ -23,8 +23,17 @@ const App = () => {
   };
 
   return (
-    <div>
-      <UserForm></UserForm>
+    <div
+      style={{
+        width: '30rem',
+        backgroundColor: '#e0e0e0',
+        alignContent: 'center',
+        borderRadius: '10px',
+        margin: '25px auto',
+        padding: '10px',
+      }}
+    >
+      <UserForm />
       <UserItemList items={users} onAddUser={addUserHandler} />
     </div>
   );

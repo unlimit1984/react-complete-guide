@@ -1,0 +1,8 @@
+.form-control label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control button {
+  background-color: beige;
+}
