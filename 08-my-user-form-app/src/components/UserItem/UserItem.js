@@ -1,10 +1,14 @@
+import styles from '../../shared-styles/Card.module.css';
+
 const UserItem = (props) => {
   const user = props.item;
 
   return (
-    <li>
+    // <li>
+    <div className={styles.card}>
       <input readOnly value={`${user.name} (${user.age} years old)`} />
-    </li>
+      {/* </li> */}
+    </div>
   );
 };
 

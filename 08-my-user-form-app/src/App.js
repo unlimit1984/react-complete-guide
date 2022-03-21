@@ -1,5 +1,6 @@
 import UserForm from './components/UserForm/UserForm';
 import UserItemList from './components/UserItemList/UserItemList';
+
 import { useState } from 'react';
 
 const App = () => {
@@ -23,18 +24,9 @@ const App = () => {
   };
 
   return (
-    <div
-      style={{
-        width: '30rem',
-        backgroundColor: '#e0e0e0',
-        alignContent: 'center',
-        borderRadius: '10px',
-        margin: '25px auto',
-        padding: '10px',
-      }}
-    >
-      <UserForm />
-      <UserItemList items={users} onAddUser={addUserHandler} />
+    <div>
+      <UserForm onAddUser={addUserHandler} />
+      <UserItemList items={users} />
     </div>
   );
 };
