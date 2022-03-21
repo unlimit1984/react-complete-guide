@@ -1,9 +1,35 @@
-.modal {
-  width: 50rem;
-  background-color: #eb9a9a;
-  align-content: center;
-  border-radius: 10px;
+.modal-background {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.modal-content {
+  position: absolute;
+  background-color: antiquewhite;
+  border-radius: 15px;
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
-  margin: 25px auto;
+  top: 20%;
+  left: 50%;
+  width: 40rem;
+  margin-left: -20rem;
+  z-index: 2;
+}
+
+.header {
+  color: white;
+  font-weight: bold;
+  background-color: #42213d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+
+.content {
   padding: 10px;
 }
