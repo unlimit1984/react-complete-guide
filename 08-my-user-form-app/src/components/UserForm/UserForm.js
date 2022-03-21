@@ -12,6 +12,16 @@ const UserForm = (props) => {
     age: "Age can't be empty.",
   });
 
+  const resetModal = () => {
+    setInvalidMessage((prevState) => {
+      return {
+        ...prevState,
+        username: "Username can't be empty.",
+        age: "Age can't be empty.",
+      };
+    });
+  };
+
   const submutHandler = (event) => {
     event.preventDefault();
     if (username.trim().length === 0 || age.trim().length === 0) {
@@ -23,9 +33,11 @@ const UserForm = (props) => {
     props.onAddUser(newUser);
     setUsername('');
     setAge('');
+    resetModal();
   };
 
   const userNameHandler = (event) => {
+    setUsername(event.target.value);
     if (event.target.value.trim().length === 0) {
       setInvalidMessage((prevState) => {
         return {
@@ -36,7 +48,6 @@ const UserForm = (props) => {
       return;
     }
 
-    setUsername(event.target.value);
     setInvalidMessage((prevState) => {
       return {
         ...prevState,
@@ -46,6 +57,7 @@ const UserForm = (props) => {
   };
 
   const ageHandler = (event) => {
+    setAge(event.target.value);
     if (event.target.value.trim().length === 0) {
       setInvalidMessage((prevState) => {
         return {
@@ -56,7 +68,7 @@ const UserForm = (props) => {
       return;
     }
 
-    if (!isNaN(event.target.value) && event.target.value <= 0) {
+    if (isNaN(event.target.value) || event.target.value <= 0) {
       setInvalidMessage((prevState) => {
         return {
           ...prevState,
@@ -65,8 +77,6 @@ const UserForm = (props) => {
       });
       return;
     }
-
-    setAge(event.target.value);
     setInvalidMessage((prevState) => {
       return {
         ...prevState,
